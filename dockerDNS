@@ -1,0 +1,8 @@
+docker run \
+--rm \
+--name dnsmasq \
+-p 127.0.0.99:53:53/udp \
+-p 127.0.0.99:53:53/tcp \
+--cap-add=NET_ADMIN \
+andyshinn/dnsmasq \
+--no-daemon --log-queries
